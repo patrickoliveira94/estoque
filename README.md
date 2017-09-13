@@ -1,4 +1,6 @@
-## Estoque
+## Stock Control System
+
+The system was implemented in PHP with the Laravel framework in version 5.0 and MySQL database.
 
 ## Laravel PHP Framework
 
@@ -16,10 +18,19 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+## MySQL
+
+Download:
+```
+https://www.mysql.com/downloads/
+```
+
+Documentation:
+```
+https://dev.mysql.com/doc/
+```
