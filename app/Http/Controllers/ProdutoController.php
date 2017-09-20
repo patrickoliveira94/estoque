@@ -1,23 +1,26 @@
 <?php namespace estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Request;
 
 class ProdutoController extends Controller {
 
     public function lista(){
 
-        $html = '<h1>Listagem de produtos com Laravel</h1>';
-
-        $html .= '<ul>';
-
         $produtos = DB::select('select * from produtos');
 
-        foreach ($produtos as $p) {
-            $html .= '<li> Nome: '. $p->nome .', Descrição: '. $p->descricao .'</li>';
-        }
+        return view('listagem')->withProdutos($produtos);
+    }
 
-        $html .= '</ul>';
+    public function mostra(){
 
-        return $html;
+      $id = Request::route('id');
+
+      $resposta = DB::select('select * from produtos where id = ?', [$id]);
+
+      if(empty($resposta)) {
+        return "Esse produto não existe";
+      }
+      return view('detalhes')->with('p', $resposta[0]);
     }
 }
