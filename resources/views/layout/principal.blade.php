@@ -17,12 +17,12 @@
 
     <ul class="nav navbar-nav navbar-right">
       <li>
-          <a href="{{action('ProdutoController@lista')}}">
+          <a class="navbar-brand" href="{{action('ProdutoController@lista')}}">
               Listagem
           </a>
       </li>
       <li>
-          <a href="{{action('ProdutoController@novo')}}">
+          <a class="navbar-brand" href="{{action('ProdutoController@novo')}}">
               Novo
           </a>
       </li>
